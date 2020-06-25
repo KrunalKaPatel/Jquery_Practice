@@ -1,0 +1,38 @@
+<html>
+<head>
+<script type="text/javascript" src="../jquery.min.js"></script>
+<script>
+
+/* jquery selectors */
+
+$(document).ready(function(){
+  $("#button1").click(function(){ /* ID selector */
+    $("p").hide(); /* tag selector */
+  });
+  $(".button2").click(function(){ /* Class selector */
+    $("p").show();
+  });
+});
+
+  // $(this)  /* "this" will select current element */ 
+  // Example for this keyword  /*  http://html-tuts.com/jquery-this-selector/    */ 
+  // $("p.intro") /* this will select "p" tags with class "intro" */
+  // $("p:first") /* this will select first "p" tag */
+  // $("ul li:first-child")	/* this will selects the first <li> element of <ul>*/
+  // $("[href]") /* this will select all elements with "href" attribute */
+  // $("a[target='_blank']") /* this wil select all "a" tags which has target value equals to 							    "_blank" */
+  // $(":button")	/* this will selects all <button> elements and <input> elements of 							 type="button"*/
+
+</script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button id="button1">Click me to hide paragraphs</button>
+<button class="button2">Click me to show paragraphs</button>
+</body>
+</html>

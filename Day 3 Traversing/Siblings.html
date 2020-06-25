@@ -1,0 +1,43 @@
+<!-- TRAVERSING siblings -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.siblings * { 
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="../jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("h2").siblings().css({"color": "red", "border": "2px solid red"}); /* this will select all the siblings of "h2" tag */
+
+  $("h2").siblings("p").css({"color": "red", "border": "2px solid green"}); /* this will select all the "p" tags which are siblings of "h2" tag */
+
+  $("h2").next().css({"color": "red", "border": "2px solid blue"}); /* this will select the element which is next to "h2" tag */
+
+  $("h2").nextAll().css({"color": "red", "border": "2px solid red"}); /* this will select all the elemets which are next to "h2" tag */
+
+  $("h2").nextUntil("p").css({"color": "red", "border": "2px solid red"}); /* this will select all the elements which are next to "h2" tag until "p" tag */
+
+});
+</script>
+</head>
+<body class="siblings">
+
+<div>div (parent)
+  <p>p</p>
+  <span>span</span>
+  <h2>h2</h2>
+  <h3>h3</h3>
+  <p>p</p>
+</div>
+
+</body>
+</html>

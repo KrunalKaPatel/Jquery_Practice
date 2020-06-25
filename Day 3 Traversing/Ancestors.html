@@ -1,0 +1,47 @@
+<!-- TRAVERSING DESCENDANTS(CHILDREN) -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.ancestors * { 
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+
+</style>
+<script src="../jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+  $("span").parent().css({"color": "red", "border": "2px solid red"}); 
+      /* ".parent()" this will targer the parent element "li" of the current element "span" */
+
+  $("span").parents().css({"color": "red", "border": "2px solid green"}); 
+      /* ".parents()" this will targer all the parent elements of the current element "span" */
+
+  $("span").parentsUntil("div").css({"color": "red", "border": "2px solid red"}); 
+      /* ".parentsUntil("div")" this will targer all the parent elements of the current element "span" until the "div" element */
+});
+
+</script>
+</head>
+<body>
+
+<div class="ancestors">
+  <div style="width:500px;">div (great-grandparent)
+    <ul>ul (grandparent)  
+      <li>li (direct parent)
+        <span>span</span>
+      </li>
+    </ul>   
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html> 
+<head> 
+	<script src="../jquery.min.js"></script> 
+	<script> 
+		$(document).ready(function() { 
+			$(".heading").add("#para1").add("#span1").css("background-color", "lightgreen");/* this will add css properties to the heading and to the "p" tags */
+		
+			$("button").click(function(){
+    			$("em").contents().wrap("<b/>"); /* this will wrap the content of em to bold */
+  			});
+
+           	$("p").find("span").end().css("border", "2px red solid"); /* this will find span tag in p element */
+		}); 
+	</script> 
+</head> 
+<body> 
+	<p style="color:red" class="heading">Welcome to GfG!!!</p> 
+	<p style="color:red" id="para1">Welcome to GeeksforGeeks !!!</p> 
+	<span style="color:red" id="span1">Article 1 !!!.</span> 
+	<div>This example adds the same css style for both "p" and "span" elements, using its class and id name!!! </div><br>
+
+	<div><em>Hello world! What a beautiful day!</em></div>
+	<button>Find all text nodes in div and wrap them</button> <br>
+
+	<p><span>Hello</span>, how are you?</p>
+</body> 
+</html> 
