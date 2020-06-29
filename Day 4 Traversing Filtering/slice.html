@@ -1,0 +1,53 @@
+<!-- Slice Exapmle -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>slice demo</title>
+<style>
+div {
+	width: 40px;
+	height: 40px;
+	margin: 10px;	
+	float: left;
+	border: 2px solid blue;
+}
+
+span {
+	color: red;
+	font-weight: bold;
+}
+
+button {
+	margin: 5px;
+}
+</style>
+
+</head>
+<body>
+
+<p><button>Turn slice yellow</button>
+<span>Click the button!</span></p>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script>
+function colorEm() 
+{
+	let $div = $( "div" );
+	$div.css( "background", "" );
+	$div.slice( 3,8).css( "background", "yellow" );
+}
+
+$( "button" ).click( colorEm );
+</script>
+</html>
