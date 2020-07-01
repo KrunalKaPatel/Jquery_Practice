@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div{
+	position: absolute;
+	border:1px solid black;
+    width:150px;
+    height:130px;
+    overflow:auto;
+    top:150px;
+    font-size: 20px;
+}
+#horizintal
+{
+	position: absolute;
+    top: 40%;
+}
+#vertical
+{
+	position: absolute;
+    top: 40%;
+    left: 10%;
+}
+</style>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+
+<button id="position-css-offset">Click Me Again</button>
+
+<div>
+The longest word in the english dictionary is: pneumonoultramicroscopicsilicovolcanoconiosis pneumonoultramicroscopicsilicovolcanoconiosis..
+</div><br>
+<button id="horizintal">Horizontal</button>
+<button id="vertical">Vertical</button>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#position-css-offset").click(function(){
+    var x = $("p").position(); /* this will return the position of the element */
+    alert("Top position: " + x.top + " Left position: " + x.left);
+    $("p").offset({top:100,left:100}); /* Return or set the offset coordinates of the p element */
+    $("p").css({"background-color": "yellow", "width": "150px"}); /* use to set the CSS property */
+  });
+  
+  $("#horizintal").click(function(){
+    alert($("div").scrollLeft() + " px");
+  });
+  
+  $("#vertical").click(function(){
+    alert($("div").scrollTop() + " px");
+  });
+});
+</script>
+</html>
