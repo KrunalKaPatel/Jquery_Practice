@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		div
+		{
+			height:100px;
+			width:300px;
+			border:1px solid black;
+			background-color:yellow;
+		}
+	</style>
+</head>
+<body>
+
+<div>
+
+This is some text in the div.
+<p>This is a paragraph in the div.</p>
+<p>This is another paragraph in the div.</p>
+
+</div>
+<br>
+
+<button>Remove div element</button>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").remove();
+  });
+});
+</script>
+</html>
