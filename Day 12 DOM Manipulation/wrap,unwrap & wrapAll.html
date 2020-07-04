@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  div
+  {
+    background-color: yellow;
+  }
+</style>
+</head>
+<body>
+
+<div>
+  <p>This is a paragraph inside a div element.</p>
+</div>
+<button id="button1">Remove the parent element from p tag with unwrap()</button>
+<button id="button2">Add the parent element to p tag with wrap()</button><br>
+<br>
+
+<span>This is span tag</span>
+<h3>This is H3 tag</h3>
+<button id="button3">Wrap all elements with wrapAll()</button>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#button1").click(function(){
+    $("p").unwrap(); /* this will remove the parent from current element */
+  });
+  $("#button2").click(function(){
+    $("p").wrap("<div></div>"); /* this will add the parent to current element */
+  });
+  $("#button3").click(function(){
+    $("span,h3").wrapAll("<div></div>");
+  });
+});
+</script>
+</html>
