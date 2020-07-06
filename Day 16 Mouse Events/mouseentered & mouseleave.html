@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<p>Move the mouse pointer over this paragraph.</p>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").mouseenter(function(){ /* this event occur when mouse entered in element */
+    $("p").css("background-color", "yellow");
+  });
+  $("p").mouseleave(function(){ /* this event occur when mouse exits out of element */
+    $("p").css("background-color", "white");
+  });
+});
+</script>
+
+</html>

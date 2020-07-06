@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		div
+		{
+			border: 1px solid black;
+			padding:10px;
+		}
+	</style>
+</head>
+<body>
+
+<div>
+  First name: <input type="text"><br>
+  Last name: <input type="text">
+</div>
+
+<p>Click an input field to get focus. Click outside an input field to lose focus.</p>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("div").focusin(function(){ /* focusin event occurs on the element, or any elements inside it */
+    $(this).css("background-color", "#FFFFCC");
+  });
+  $("div").focusout(function(){ /* focusout event occurs on the element, or any elements inside it. */
+    $(this).css("background-color", "#FFFFFF"); 
+  });
+});
+</script>
+</html>

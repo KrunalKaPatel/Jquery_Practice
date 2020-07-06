@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<p>Hover the mouse pointer over this paragraph.</p>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").hover(function(){ /* hover is an combinition of mouseenter and mouseleave event */
+    $(this).css("background-color", "yellow");
+	}, function(){
+    $(this).css("background-color", "white");
+  });
+});
+</script>
+
+</html>

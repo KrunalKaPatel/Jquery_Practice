@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<p>Window resized <span>0</span> times.</p>
+<p>Try resizing your browser window.</p>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+var x = 0;
+$(document).ready(function(){
+  $(window).resize(function(){ /* the resize() event will check screen size when it gets changed */
+    $("span").text(x += 1); 
+  });
+});
+</script>
+</html>

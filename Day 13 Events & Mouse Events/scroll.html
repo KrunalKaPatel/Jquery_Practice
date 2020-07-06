@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	div{
+		border:1px solid black;
+		width:250px;
+		height:200px;
+		overflow:scroll;
+	}
+</style>
+</head>
+<body>
+
+<p>Try the scrollbar in the div</p>
+
+<div>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+<br><br>
+'Whenever you feel like criticizing anyone,' he told me, just remember that all the people in this world haven't had the advantages that you've had.'
+<br><br>
+In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+<br><br>
+'Whenever you feel like criticizing anyone,' he told me, just remember that all the people in this world haven't had the advantages that you've had.'
+</div>
+
+<p>Scrolled <span>0</span> times.</p>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+var x = 0;
+$(document).ready(function(){
+  $("div").scroll(function(){ /* the scroll event get traggered when user scrolls in the specified element */
+    $("span").text( x+= 1);
+  });
+});
+</script>
+</html>
